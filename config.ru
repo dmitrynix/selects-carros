@@ -3,6 +3,6 @@ require 'bundler/setup'
 
 Bundler.require :default
 
-require File.dirname(__FILE__)+'/demo_app'
+require File.dirname(__FILE__)+'/select_app'
 
-run DemoApp::Application
+run SelectApp::Application
