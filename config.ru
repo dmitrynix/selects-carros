@@ -3,6 +3,14 @@ require 'bundler/setup'
 
 Bundler.require :default
 
-require File.dirname(__FILE__)+'/select_app'
+module SelectApp
+  class Application < Sinatra::Base
+    set :public_folder, __FILE__
+
+    get '/' do
+      redirect '/index.html'
+    end
+  end
+end
 
 run SelectApp::Application
